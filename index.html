@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benefits Of Meat</title>
+  </head>
+  <script src="script.js" defer type="module"></script>
+  <!-- Below = Bootstrap Link & Google Fonts
+  Above = custom script
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Delius&family=Emilys+Candy&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Delius&family=Emilys+Candy&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Delius&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&family=Emilys+Candy&family=Macondo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&family=Emilys+Candy&family=Macondo&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!--link custom css-->
+    <!--NAVBAR-->
+    <!-- <img src="./imgs/logo.png" alt="Logo" id="logo"/> -->
+    <div class="navbar">
+      <div class="navitem" onclick="document.home()">Home</div>
+      <div class="navitem" onclick="document.aboutUs()">About Us</div>
+      <div class="navitem" onclick="document.showMenu()">Menu</div>
+      <div class="navitem" onclick="document.showMeat()">Benefits Of Meat</div>
+    </div>
+
+    <!--START OF MENU-->
+    <div id="homeCont">
+      <video
+        autoplay
+        id="videoAd"
+        muted
+        loop=""
+        playsinline=""
+        muted=""
+        type="video/mp4"
+        loop=""
+        muted=""
+        playsinline=""
+        autoplay=""
+        controlslist="nodownload"
+        disablepictureinpicture=""
+      >
+        <!-- src="https://w4kg78-5173.csb.app/imgs/ad.mp4" -->
+
+        <source src="./imgs/newAd.mp4" type="video/mp4" />
+      </video>
+      <div id="temp"></div>
+      <div id="homeCardsCont">
+        <div class="homeCardCont">
+          <div class="cardText">
+            <h1 class="homeTitle">Drinks</h1>
+            <h1 class="homeDesc">
+              Delicious, nutritious and blended right before your very eyes, our
+              legendary lineup of tasty smoothies are guaranteed to nourish both
+              your body and your cravings.
+            </h1>
+          </div>
+          <div class="homeIMG" id="homeDrink"></div>
+          <button class="homeBtn" id="toDrinks">Check Out Our Drinks</button>
+        </div>
+
+        <div class="homeCardCont" id="meatCard">
+          <div class="cardText" id="meatCardText">
+            <h1 class="homeTitle" id="meatTitle">MEAT</h1>
+            <h1 class="homeDesc" id="meatText">
+              Delicious, nutritious and just for you. Check our meat right
+              before your very eyes, our legendary lineup of tasty smoothies are
+              guaranteed to nourish both your body and your cravings.
+            </h1>
+          </div>
+          <div class="homeIMG" id="homeMeat"></div>
+
+          <button class="homeBtn" id="toMeat">Check Out Our Meat!</button>
+        </div>
+      </div>
+    </div>
+    <div id="menuCont" style="display: none">
+      <!-- Inner Wrapper End-->
+      <h1 class="divider" id="mainDishes">Main Dishes</h1>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/steakandfries.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Steak and Fries</h1>
+            <p class="price">$16</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/steakandfries.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/Steak.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Steak</h1>
+            <p class="price">$14</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/Steak.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/Chicken drumstick.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Chicken Drumstick</h1>
+            <p class="price">$19</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/Chicken drumstick.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/lasagna.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Lasagna</h1>
+            <p class="price">$15</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/lasagna.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/chickenandrice.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Chicken And Rice</h1>
+            <p class="price">$13</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/chickenandrice.jpeg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="sideCont">
+        <h1 class="divider" id="sideDishes">Side Dishes</h1>
+      </div>
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/nuts.png" alt="" />
+          </div>
+          <div class="content">
+            <h1>Nuts</h1>
+            <p class="price">$5</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="view-btn" data-src="imgs/nuts.png" draggable="false">
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/angry-chips.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Angry Chips</h1>
+            <p class="price">$5</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/angry-chips.jpeg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/cheesy-breadsticks.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Cheesy Breadsticks</h1>
+            <p class="price">$7</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/cheesy-breadsticks.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/beef-sandwich.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Beef Sandwich</h1>
+            <p class="price">$7</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/beef-sandwich.jpeg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inner Wrapper End-->
+
+      <!-- Inner Wrapper End-->
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/Bread and butter (1).jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Bread and Butter</h1>
+            <p class="price">$5</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/Bread and butter (1).jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="drinksCont">
+        <h1 class="divider" id="drinksDivider">Drinks</h1>
+      </div>
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/protein-shake.png" alt="" />
+          </div>
+          <div class="content">
+            <h1>Protein Shake</h1>
+            <p class="price">$4</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/protein-shake.png"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/Water.png" alt="" />
+          </div>
+          <div class="content">
+            <h1>Water</h1>
+            <p class="price">Free</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/Water.png"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menuNotCard">
+        <div class="inner-card">
+          <div class="img-wrapper">
+            <img src="imgs/carbwater.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h1>Sparkling Water</h1>
+            <p class="price">$2</p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button
+              class="view-btn"
+              data-src="imgs/carbwater.jpg"
+              draggable="false"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- menuCont Wrapper End-->
+    </div>
+
+    <!-- END of MENU & NAVBAR & START of Protein Card-->
+    <div id="cont">
+      <h1 id="title">Benefits Of Meat</h1>
+      <div class="inner-wrapper">
+        <!-- Inner Wrapper START-->
+
+        <div class="notCard">
+          <div class="inner-card">
+            <div class="img-wrapper">
+              <img src="imgs/protein.png" alt="" />
+            </div>
+            <div class="content">
+              <h1>Protein</h1>
+              <p class="price">More Info Available</p>
+            </div>
+
+            <div class="btn-wrapper">
+              <button
+                class="view-btn"
+                data-src="imgs/protein.png"
+                draggable="false"
+              >
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Protein Card On Top-->
+        <!-- Iron Card Below-->
+
+        <div class="notCard">
+          <div class="inner-card">
+            <div class="img-wrapper">
+              <img src="imgs/iron.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h1>Iron</h1>
+              <p class="price">More Info Available</p>
+            </div>
+
+            <div class="btn-wrapper">
+              <button
+                class="view-btn"
+                data-src="imgs/iron.jpg"
+                draggable="false"
+              >
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Iron Card End-->
+
+        <div class="notCard">
+          <div class="inner-card">
+            <div class="img-wrapper">
+              <img src="imgs/zinc.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h1>Zinc</h1>
+              <p class="price">More Info Available</p>
+            </div>
+
+            <div class="btn-wrapper">
+              <button
+                class="view-btn"
+                data-src="imgs/zinc.jpg"
+                draggable="false"
+              >
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="notCard">
+          <div class="inner-card">
+            <div class="img-wrapper">
+              <img src="imgs/omega-3.jpeg" alt="" />
+            </div>
+            <div class="content">
+              <h1>Omega-3</h1>
+              <p class="price">More Info Available</p>
+            </div>
+
+            <div class="btn-wrapper">
+              <button
+                class="view-btn"
+                data-src="imgs/omega-3.jpeg"
+                draggable="false"
+              >
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Wrapper End-->
+        <div class="notCard">
+          <div class="inner-card">
+            <div class="img-wrapper">
+              <img src="imgs/carbs.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h1>Carbs</h1>
+              <p class="price">More Info Available</p>
+            </div>
+
+            <div class="btn-wrapper">
+              <button
+                class="view-btn"
+                data-src="imgs/carbs.jpg"
+                draggable="false"
+              >
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END of Protein Card & START of Invisible Display(When you click Read More) -->
+
+      <!-- START of Iron Card-->
+      <template id="aboutUsTemp">
+        <div class="w3-container" id="team">
+          <h3 class="text">Meet The Owners</h3>
+          <p class="w3-large text">The Ones Who Run The Company</p>
+          <div class="w3-row-padding" id="mujibCard">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+              <div class="w3-card">
+                <img src="/imgs/mujib.jpg" alt="Mujib" style="width: 100%" />
+                <div class="w3-container descCon">
+                  <h3>Mujib Salimi</h3>
+                  <p class="w3-opacity">Ceo &amp; Founder</p>
+                  <p class="cardDesc">
+                    He is the CEO that helped develop the resturant.
+                  </p>
+                  <p>
+                    <button
+                      class="w3-button w3-light-grey w3-block contactBtn"
+                      id="mujibContact"
+                    >
+                      <i class="fa fa-envelope"></i> Contact
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+              <div class="w3-card">
+                <img src="/imgs/aaryan.jpg" alt="Aaryan" style="width: 100%" />
+                <div class="w3-container descCon">
+                  <h3>Aaryan Umar</h3>
+                  <p class="w3-opacity">Web Designer</p>
+                  <p class="cardDesc">
+                    Tech genius. He knows every thing about code.
+                  </p>
+                  <p>
+                    <button
+                      class="w3-button w3-light-grey w3-block contactBtn"
+                      id="aaryanContact"
+                    >
+                      <i class="fa fa-envelope"></i> Contact
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+              <div class="">
+                <img src="/imgs/ty.jpg" alt="Tyrease" style="width: 100%" />
+                <div class="w3-container descCon">
+                  <h3>Tyrease Lovely</h3>
+                  <p class="w3-opacity">Co Ceo &amp; Co Founder</p>
+                  <p class="cardDesc">He helped make the resturant.</p>
+                  <p>
+                    <button
+                      class="w3-button w3-light-grey w3-block contactBtn"
+                      id="tyContact"
+                    >
+                      <i class="fa fa-envelope"></i> Contact
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="madeCont">
+            <h1 id="aboutUsText">About Us And Our Story</h1>
+            <h2 id="made">
+              Welcome to Mr. Meats! We’re a family-owned restaurant that started
+              in 2023, and we’re all about serving great meat. Our team has
+              worked in some amazing kitchens, like Hell’s Kitchen, The French
+              Laundry, and Eleven Madison Park. At Mr. Meats, we focus on
+              quality, supporting our community, and giving you meals packed
+              with flavor. Whether you’re here for a quick bite or something
+              special, we hope you love the experience and the delicious halal
+              meats we’ve carefully picked out just for you.
+            </h1>
+          </div>
+        </div>
+      </template>
+    </div>
+    <!-- INVISIBLE STUFF-->
+    <div class="light-box">
+      <div class="box-wrapper">
+        <div class="box">
+          <span class="close-btn">&times;</span>
+          <img src="" alt="" class="light-img boxIMG" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,734 @@
+.navbar {
+  /* display: flex; */
+  width: 100%;
+  height: 10vh;
+  background-color: #ccc;
+  background-color: #ffd700;
+  background-color: #cfb53b;
+  background-color: #efbf04;
+  background-color: rgb(32, 95, 155);
+
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  vertical-align: top;
+}
+#title {
+  display: flex;
+  justify-self: center;
+  font-family: "Sour Gummy", serif;
+  font-weight: 600;
+  align-self: center;
+  justify-self: center;
+  margin-top: 3%;
+  font-size: 70px;
+  font-family: "Charm", serif;
+}
+.text {
+  margin-left: 27%;
+}
+.navitem {
+  display: flex;
+  font-size: 1.5rem;
+  margin-left: 5%;
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  color: rgb(57, 52, 52);
+}
+#team {
+  margin-top: 5%;
+  display: block;
+  margin-left: 20%;
+}
+body {
+  background-color: #36454f;
+  background-color: #ad8848;
+  background-color: #d9c67c;
+  background-color: #c0a360;
+  background-image: linear-gradient(to right, #ffde59, #ff914d);
+  margin: 0;
+  padding: 0;
+}
+#card {
+  display: block;
+}
+
+p {
+  font-size: large;
+}
+
+* {
+  transition: all 500ms;
+}
+
+.notCard,
+.menuNotCard {
+  flex-wrap: wrap;
+  /* -basis: 33.33333%; */
+  padding: 25px;
+  border-radius: 10px;
+  width: 25%;
+  margin-top: 7%;
+  /* Change how long the card is
+  Height is height, but it isn't defined here
+  */
+}
+
+.notCard:hover,
+.menuNotCard:hover {
+  padding: 5px;
+}
+
+.notCard,
+.menuNotCard {
+  transition-delay: 1s;
+  transition: all;
+  transition-duration: 0.2s;
+  animation: appear 0.6s ease-in-out 100ms 1 normal both;
+}
+
+#madeCont {
+  margin-top: 10%;
+  margin-right: 30%;
+  width: 70%;
+  height: max-content;
+  margin-bottom: 20%;
+}
+#made,
+#aboutUsText {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 140%;
+}
+#aboutUsText {
+  font-size: 300%;
+  margin-left: 20%;
+}
+.inner-card {
+  border-radius: 30px;
+  background-color: #fff;
+
+  padding: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-style: solid;
+  border-color: transparent;
+  border: 3px solid transparent;
+
+  border-image: linear-gradient(to right, #ffde59, #ff914d);
+  border-color: rgb(31, 109, 199);
+  border-image-slice: 1;
+}
+
+.content {
+  /* From bottom of card button to description*/
+  margin-bottom: 20px;
+}
+.content h1 {
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.desc {
+  font-family: "Macondo", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Sour Gummy", serif;
+  font-size: 110%;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.btn-wrapper {
+  display: block;
+  text-align: center;
+}
+
+.price {
+  text-align: center;
+  justify-self: center;
+  justify-items: center;
+  font-size: 50%;
+  font-family: "Sour Gummy", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.box {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  transform: scale(0);
+  transition: all 200ms ease-in-out;
+  padding: 10px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+}
+.box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+}
+.box .light-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+.box .close-btn {
+  position: absolute;
+  z-index: 100;
+  font-size: 30px;
+  color: #ccc;
+  left: 100%;
+  top: 0;
+  border: 2px solid transparent;
+  border-color: transparent;
+  border-image: linear-gradient(to right, #ffde59, #ff914d);
+  border-image-slice: 1;
+
+  border-radius: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+/* Effect */
+.effect .light-box {
+  opacity: 1;
+  visibility: visible;
+}
+.effect .light-box .box {
+  transform: scale(1);
+}
+
+.view-btn {
+  width: 70%;
+  height: 40px;
+  border: none;
+  background-color: steelblue;
+  background-image: linear-gradient(to right, #ffde59, #ff914d);
+
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.view-btn:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+
+  margin-top: -50px;
+}
+
+.inner-card {
+  border-radius: 30px;
+  background-color: #ffd700;
+  background-color: #efbf04;
+  background-color: white;
+
+  padding: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.light-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-out;
+}
+
+.box .light-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.effect .light-box {
+  opacity: 1;
+  visibility: visible;
+}
+.effect .light-box .box {
+  transform: scale(1);
+}
+
+#menuCont {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+}
+
+.menuIMG {
+  display: flex;
+  float: inline-end;
+  width: 100%;
+  height: 100%;
+}
+
+.w3-col {
+  animation: appear 0.6s ease-in-out 100ms 1 normal both;
+  border-style: none;
+  box-shadow: none;
+}
+
+.w3-card {
+  box-shadow: none;
+}
+
+#logo {
+  width: 5%;
+  height: 10%;
+  margin: 0;
+  background-clip: border-box;
+  padding: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 1px;
+  right: 1px;
+  z-index: 5;
+}
+
+#mainDishes,
+#sideDishes,
+.divider {
+  font-family: "Sour Gummy", serif;
+  font-family: "Charm", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+#sideCont,
+#drinksCont {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+}
+#mainDishes {
+  position: absolute;
+  top: 13%;
+  left: 45%;
+}
+
+#sideDishes {
+  position: relative;
+  margin-top: 10vh;
+}
+
+#drinksDivider {
+  display: flex;
+  justify-self: center;
+  position: relative;
+  margin-top: 10vh;
+}
+#toDrinks,
+#toMeat {
+  background-color: #36454f;
+  width: 30%;
+  display: block;
+  height: 40%;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  position: relative;
+  float: right;
+  font-size: 100%;
+  color: red;
+  float: none;
+}
+
+#toMeat {
+  bottom: 0;
+  position: relative;
+  margin-top: 30%;
+  left: -50%;
+}
+
+.homeTitle {
+  font-size: 200%;
+  float: right;
+  top: 150%;
+  right: 30%;
+  position: relative;
+  font-family: "Sour Gummy", serif;
+}
+
+#meatCard {
+  position: relative;
+  right: -50%;
+  bottom: -50%;
+}
+
+.homeDesc {
+  font-family: "Sour Gummy", serif;
+  font-size: 120%;
+  margin-top: 10%;
+
+  float: right;
+  margin-left: 1%;
+  position: relative;
+  line-break: loose;
+}
+
+.homeText {
+  width: 70%;
+  float: right;
+  height: 100%;
+}
+#temp {
+  position: absolute;
+  z-index: -10;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+}
+.homeCard {
+  display: block;
+  margin-top: 15%;
+  float: right;
+  position: relative;
+  border-style: solid;
+  border-color: blue;
+  width: 80%;
+  height: 100%;
+  right: 2vw;
+  position: relative;
+  bottom: 5vh;
+}
+#toDrinks:hover,
+#toMeat:hover {
+  background-color: #29343c;
+}
+#temp {
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+  bottom: -100vh;
+}
+#toDrinks,
+#toMeat {
+  right: -50%;
+  bottom: -10%;
+}
+#meatCardText {
+  width: 50%;
+  float: left;
+  margin-left: -30%;
+}
+#meatTitle {
+  float: left;
+}
+.cardText {
+}
+#meatText {
+  float: left;
+  margin-left: -80%;
+}
+.homeBtn {
+  font-family: "Charm", serif;
+  font-size: 110% !important;
+}
+#videoAd {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 90%;
+
+  min-width: 100%;
+  min-height: 90%;
+}
+#homeDrink {
+  background-image: url("./imgs/drinks.png");
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  left: 10%;
+}
+#homeMeat {
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+
+  width: 60%;
+  height: 160%;
+  position: absolute;
+  left: 30%;
+  bottom: -70%;
+  background-image: url("https://www.winemag.com/wp-content/uploads/2022/12/12_2022_Playing_with_Fire_HERO_Photo_Tara_Donne_Food_Chris_Lanier_Props_Christina_Lane_1920x1280.jpg");
+  background-size: cover;
+}
+#homeCardsCont {
+  float: right;
+  border-color: red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -130vh;
+  right: 5%;
+}
+
+.homeCardCont {
+  float: right;
+
+  width: 50%;
+  display: block;
+  height: 25vh;
+}
+#homeCont {
+  margin-top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  position: relative;
+
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+  .text {
+    margin-left: 22%;
+    word-break: keep-all;
+  }
+  .navbar {
+    margin-left: 10%;
+    width: 80%;
+    height: 10%;
+    justify-content: center;
+  }
+  .menuNotCard {
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+  .cardDesc {
+    display: none;
+  }
+  #toDrinks,
+  #toMeat {
+    bottom: 0%;
+    right: 0;
+    margin-left: 50%;
+
+    width: 50%;
+  }
+  .contactBtn {
+    margin-left: 15%;
+  }
+  .homeBtn {
+    border: none;
+  }
+  .homeCard {
+    width: 100%;
+  }
+  .homeDesc {
+    margin-top: 3%;
+  }
+  #title {
+    font-size: 200%;
+    font-family: "Charm", serif;
+  }
+  #menuCont {
+    margin-top: 150px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuNotCard {
+    margin-left: 10%;
+  }
+  .notCard,
+  .menuNotCard {
+    width: 60%;
+  }
+  .img-wrapper {
+    width: 100%;
+    height: 30%;
+  }
+  .inner-wrapper {
+    margin-top: 3%;
+  }
+  .w3-container {
+    display: flex;
+    justify-content: center;
+  }
+  .text {
+    position: relative;
+    left: -10%;
+  }
+  .w3-grayscale {
+    margin-top: 100px;
+  }
+  #mujibCard {
+    margin-top: 100px;
+  }
+  .descCon > .w3-opacity {
+    display: none;
+    font-size: 100%;
+    white-space: pre-line;
+  }
+  .content > * {
+    display: flex;
+    justify-content: center;
+  }
+  #mainDishes {
+    position: relative;
+    left: 0vw;
+    top: 0;
+  }
+  #madeCont {
+    width: 80%;
+  }
+  #made,
+  #aboutUsText {
+    word-break: keep-all;
+  }
+  #videoAd {
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 15%;
+  }
+  .close-btn {
+    position: absolute !important;
+    top: -15% !important;
+    left: 87% !important;
+  }
+  .desc {
+    font-size: 90%;
+  }
+  #homeCardsCont {
+    margin-top: 25%;
+    bottom: -100vh;
+  }
+
+  #homeCont {
+    margin-bottom: 15%;
+  }
+  #toMeat {
+    position: relative;
+    left: -100%;
+    bottom: -125%;
+    width: max-content;
+  }
+  .homeBtn {
+    width: max-content !important;
+    left: -30%;
+  }
+  .descCon > p > {
+    display: none;
+  }
+  h3 > .descCon > .w3-opacity,
+  p > .descCon > .w3-opacity {
+    display: none;
+    font-size: 500%;
+    white-space: pre;
+  }
+  .descCon > * {
+    font-size: 90%;
+    word-break: keep-all;
+  }
+
+  /*
+  #mainDishes,
+  #sideDishes {
+    position: absolute;
+    font-size: 40px;
+    top: -2%;
+    left: 30%;
+  }
+  #sideDishes {
+    position: absolute;
+    font-size: 40px;
+    top: 49.5%;
+    left: 32%;
+  }
+  */
+}
